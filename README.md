@@ -1,7 +1,7 @@
 # Toy Car using ROS
 Project 1 of ENPM 662 - Robot Modelling
 
-##Instructions for teleop:
+## Instructions for teleop:
 1) Go to the package folder and copy the packages into catkin_ws/src
 2) Go to the catkin_ws folder
 3) Run the command "catkin_make clean && catkin_make"
@@ -15,7 +15,7 @@ Project 1 of ENPM 662 - Robot Modelling
 	Space: Stop the vechicle abruptly
 7) Open the rviz and add LaserScan
 
-##Instructions for moving the robot on a straight line or circular path:
+## Instructions for moving the robot on a straight line or circular path:
 1) Open a terminal
 2) Run the command "roslaunch robot_fourwheel move_freely.launch"
 3) Open a new terminal and run the publisher node
