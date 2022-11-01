@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="robot_fourwheel">
+
+  <link name="dummy_link" />
+
+  <joint name="dummy_link_joint" type="fixed">
+    <parent link="dummy_link"/>
+    <child link="base_link"/>
+  </joint>
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0156756822833727 1.27707395769505E-08 0.0647698229985954"
+        rpy="0 0 0" />
+      <mass
+        value="55.149112811909" />
+      <inertia
+        ixx="1.16284846332362"
+        ixy="-2.7020450595447E-07"
+        ixz="-0.0193921136203055"
+        iyy="4.39098958696797"
+        iyz="4.60720047587546E-08"
+        izz="5.4001751110785" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_fourwheel/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_fourwheel/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="ra">
+    <inertial>
+      <origin
+        xyz="1.1102E-16 -5.5511E-17 1.3878E-17"
+        rpy="0 0 0" />
+      <mass
+        value="1.6474" />
+      <inertia
+        ixx="0.090962"
+        ixy="3.1958E-16"
+        ixz="-1.1648E-49"
+        iyy="0.00053142"
+        iyz="3.2863E-35"
+        izz="0.090962" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_fourwheel/meshes/ra.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_fourwheel/meshes/ra.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="raj"
+    type="continuous">
+    <origin
+      xyz="-0.21541 0 0.0635"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="ra" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="rlw">
+    <inertial>
+      <origin
+        xyz="1.1102E-16 -0.0381 0"
+        rpy="0 0 0" />
+      <mass
+        value="2.3167" />
+      <inertia
+        ixx="0.0074731"
+        ixy="-1.861E-17"
+        ixz="-3.8054E-37"
+        iyy="0.012704"
+        iyz="1.964E-35"
+        izz="0.0074731" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_fourwheel/meshes/rlw.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_fourwheel/meshes/rlw.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rlwj"
+    type="fixed">
+    <origin
+      xyz="0 0.4064 0"
+      rpy="0 0 0" />
+    <parent
+      link="ra" />
+    <child
+      link="rlw" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="rrw">
+    <inertial>
+      <origin
+        xyz="-1.1102E-16 0.0381 1.3878E-17"
+        rpy="0 0 0" />
+      <mass
+        value="2.3167" />
+      <inertia
+        ixx="0.0074731"
+        ixy="-1.8619E-17"
+        ixz="-3.8054E-37"
+        iyy="0.012704"
+        iyz="1.964E-35"
+        izz="0.0074731" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_fourwheel/meshes/rrw.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_fourwheel/meshes/rrw.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rrwj"
+    type="fixed">
+    <origin
+      xyz="0 -0.4064 0"
+      rpy="0 0 0" />
+    <parent
+      link="ra" />
+    <child
+      link="rrw" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="fl">
+    <inertial>
+      <origin
+        xyz="-5.5511E-17 0.080257 -0.05607"
+        rpy="0 0 0" />
+      <mass
+        value="0.51846" />
+      <inertia
+        ixx="0.0025514"
+        ixy="6.6174E-21"
+        ixz="-1.6544E-21"
+        iyy="0.00028983"
+        iyz="0.00031095"
+        izz="0.0024288" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_fourwheel/meshes/fl.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_fourwheel/meshes/fl.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="flj"
+    type="continuous">
+    <origin
+      xyz="0.29259 0.2032 0.127"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="fl" />
+    <axis
+      xyz="0 0 1" />
+    <!-- <limit
+      lower="-0.5"
+      upper="0.5"
+      effort="0"
+      velocity="0" /> -->
+  </joint>
+  <link
+    name="flw">
+    <inertial>
+      <origin
+        xyz="1.3878E-16 -0.0381 1.3878E-17"
+        rpy="0 0 0" />
+      <mass
+        value="2.3167" />
+      <inertia
+        ixx="0.0074731"
+        ixy="-1.8094E-17"
+        ixz="-3.8054E-37"
+        iyy="0.012704"
+        iyz="1.964E-35"
+        izz="0.0074731" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_fourwheel/meshes/flw.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_fourwheel/meshes/flw.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="flwj"
+    type="continuous">
+    <origin
+      xyz="0 0.2032 -0.0635"
+      rpy="0 0 0" />
+    <parent
+      link="fl" />
+    <child
+      link="flw" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="fr">
+    <inertial>
+      <origin
+        xyz="-5.8287E-16 -0.080257 -0.05607"
+        rpy="0 0 0" />
+      <mass
+        value="0.51846" />
+      <inertia
+        ixx="0.0025514"
+        ixy="-1.5753E-17"
+        ixz="-2.1429E-18"
+        iyy="0.00028983"
+        iyz="-0.00031095"
+        izz="0.0024288" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_fourwheel/meshes/fr.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_fourwheel/meshes/fr.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="frj"
+    type="continuous">
+    <origin
+      xyz="0.29259 -0.2032 0.127"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="fr" />
+    <axis
+      xyz="0 0 1" />
+    <!-- <limit
+      lower="-0.5"
+      upper="0.5"
+      effort="0"
+      velocity="0" /> -->
+  </joint>
+  <link
+    name="frw">
+    <inertial>
+      <origin
+        xyz="-8.3267E-17 0.0381 -1.3878E-17"
+        rpy="0 0 0" />
+      <mass
+        value="2.3167" />
+      <inertia
+        ixx="0.0074731"
+        ixy="-1.8102E-17"
+        ixz="-3.8054E-37"
+        iyy="0.012704"
+        iyz="1.964E-35"
+        izz="0.0074731" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_fourwheel/meshes/frw.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_fourwheel/meshes/frw.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="frwj"
+    type="continuous">
+    <origin
+      xyz="0 -0.2032 -0.0635"
+      rpy="0 0 0" />
+    <parent
+      link="fr" />
+    <child
+      link="frw" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  
+  <gazebo>
+		<plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+			<robotNamespace>/robot_fourwheel</robotNamespace>
+			<robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+			<legacyModeNS>true</legacyModeNS>
+		</plugin>
+	</gazebo>
+	
+  
+  <transmission name="tran1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="raj">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor1">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="tran1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="flj">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor2">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="tran1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="frj">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor3">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+</robot>

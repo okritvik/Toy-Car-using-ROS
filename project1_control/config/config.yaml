@@ -1,0 +1,21 @@
+robot_fourwheel:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50  
+
+  # Controllers ---------------------------------------
+  raj_velocity_controller:
+    type: velocity_controllers/JointVelocityController
+    joint: raj
+    pid: {p: 100.0, i: 10.0, d: 5.0}
+  
+  flj_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: flj
+    pid: {p: 10.0, i: 5.0, d: 2.0}
+
+  frj_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: frj
+    pid: {p: 10.0, i: 5.0, d: 2.0}
